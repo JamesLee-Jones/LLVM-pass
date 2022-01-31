@@ -47,4 +47,9 @@ int main(int argc, char** argv) {
 will produce the output:
 ```
 The program has a total of 1 functions and 10 basic blocks.
+1: 1
+2: 5
+3: 1
+8: 2
+9: 1
 ```
