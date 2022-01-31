@@ -23,13 +23,16 @@ namespace {
 			std::map<int,int> instr_in_block;
 
 			for(auto &F : M) {
-				num_functions++;
-				for(auto &B : F) {
-					num_basic_blocks++;
-					int num_instr = 0;
-					for(auto &I : B)
-						num_instr++;
-					instr_in_block[num_instr]++;
+				Function *fp = &F;
+				if(!fp->isDeclaration()) {
+					num_functions++;
+					for(auto &B : F) {
+						num_basic_blocks++;
+						int num_instr = 0;
+						for(auto &I : B)
+							num_instr++;
+						instr_in_block[num_instr]++;
+					}
 				}
 			}
 
