@@ -21,7 +21,7 @@ The pass can then be used to count the number of functions and basic blocks by r
 ```
 opt -load lib/LLVMCount.so -count < relative/path/to/program.bc > /dev/null
 ```
-in the directory SRC_ROOT/build.
+in the directory SRC_ROOT/build. This will generate a pdf file called freqOfInstructionsPerBlock.pdf in SRC_ROOT/build containing a histogram of the frequency of the number of instructions in a block.
 
 ## Example
 Running this pass on the following program:
@@ -53,3 +53,4 @@ The program has a total of 1 functions and 10 basic blocks.
 8: 2
 9: 1
 ```
+along with the pdf freqOfInstructionsPerBlock.pdf in SRC_ROOT/build.
