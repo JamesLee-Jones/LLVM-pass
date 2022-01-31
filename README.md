@@ -1,6 +1,10 @@
 # LLVM Count Pass
 An LLVM pass that prints out the number of functions and basic blocks in a program along with generating a pdf containing a histogram of the number of instructions in each block.
 
+## Dependencies
+- Clang and LLVM 11.0
+- gnuplot
+
 ## Setup
 Copy the Count directory in to the folder SRC_ROOT/llvm/lib/Transforms and add the following line to SRC_ROOT/llvm/lib/Transforms/CMakeLists.txt:
 ```
